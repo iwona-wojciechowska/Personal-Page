@@ -1,0 +1,671 @@
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 0px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100vh;
+  }
+  .page-header {
+    display: flex;
+    height: 50vh;
+    background: url('../img/photo.png');
+    background-size: cover;
+    position: relative;
+    flex-direction: column;
+  }
+  .menu, .larger {
+    display: none;
+  }
+  .burger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 1;
+    font-size: 40px;
+    line-height: 50px;
+    transition: .3s linear;
+  }
+  .burger:hover {
+    cursor: pointer; 
+  }
+  aside {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -280px;
+    width: 280px;
+    background-color:#544c49;
+    opacity: 0.8;
+    transition: .3s linear;
+  }
+  .fas {
+    display: none;
+    font-size: 35px;
+    color:#544c49; 
+  }
+  i.show {
+    display: block;
+  }
+  aside.show {
+    right: -5px;
+  }
+  .active nav {
+   display: block;  
+  }
+  .active nav ul {
+  display: block;
+  position: absolute;
+  top: 60px; 
+  }
+  .active nav ul li {
+    display: block;
+    position: relative;
+    padding: 5px;
+    left: 70px;
+    margin-bottom: 8px; 
+  }
+  .active nav li a {
+    color: #756f6c;
+    font-size: 25px;
+    font-family: 'Dosis', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+    font-weight: 500;
+    opacity: 2;
+  }
+  .active nav a:hover {
+    color: #756f6c;
+    opacity: 2;
+    cursor: pointer;
+    zoom: 1.1;
+  }
+  .page-header h1 {
+    color: #544c49;
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poiret One', cursive;
+    font-weight: 1200;
+    position: absolute; 
+    bottom: 45%;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .picture {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+  .about .picture img {
+    height: 150px;
+    padding-top: 13px;
+  }
+  .description p {
+    font-family: 'Dosis', sans-serif;
+    color: #544c49;
+    padding: 20px;
+    padding-bottom: 5px;
+    padding-top: 30px;
+    font-size: 0.8em;
+  }
+  .skillset  {
+    padding: 17px;
+    padding-top: 20px;
+    font-family: 'Dosis', sans-serif;
+    color: #544c49;
+  }
+  .list li {
+    list-style: none;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    color: #544c49;
+    font-size: 0.8em;
+  }
+  .skillset h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    color: #544c49;
+    padding-left: 5px;
+   
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .headergallery h1 {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    color: #544c49;
+  }
+  .pictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nature, .city, .portrait {
+    display: flex;
+    flex-basis: 30%;
+    justify-content: center;
+    position: relative;
+  }
+  .gallery img {
+    width: 250px;
+    height: 250px;
+    opacity: 0.5;
+    padding-bottom: 5px; 
+  }
+  .text {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poiret One', cursive;
+    color:  #544c49;
+    font-weight: 100;
+  }
+  .gallery img:hover
+  {
+    opacity: 1.0;
+    cursor: pointer;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @keyframes changeOpacity 
+  {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+  }
+  @keyframes changeSize {
+    0% { width: 190px;}
+    50% {width: 210px;}
+    100% {width: 230px;}
+  }
+  .contact .picture img {
+    width: 250px;
+    box-sizing: border-box;
+    animation-name: changeOpacity;
+    animation-duration: 5s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    position: relative;
+    padding-top: 35px;
+  }
+  .title h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    color: #544c49;
+    padding-bottom: 20px;
+    padding-top: 60px;
+  }
+  .myform {
+    display: flex;
+    flex-direction: column;
+  }
+  #name,
+  #email-data {
+  display: inline-block;
+  height: 33px;
+  width: 260px;
+  margin-bottom: 10px;
+  }
+  label {
+    font-family: 'Radley', serif;
+    color: #DCDCDC;
+  }
+  input,
+  textarea {
+    border: 2px solid #544c49;
+    width: 260px;
+  }
+  .newform button {
+    box-sizing: border-box;
+    display: block;
+    height: 40px;
+    width: 260px;
+    margin-top: 30px;
+    background-color: #756f6c;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Radley', serif;
+  }
+  .newform button:hover {
+    background-color: #FFFFFF;
+    color: #756f6c;
+    cursor: pointer;
+    border: 2px solid #756f6c;
+  }
+  .socialmedia {
+    display: flex;
+    background-color: #756f6c;
+    color: #FFFFFF;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .socialmedia .text  {
+    color: #FFF;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    position: relative;
+    left: 50px;
+    top: 8px;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 30px;
+  }
+  .socialmedia .icons ul{
+    display: flex;
+  }
+  .socialmedia .fab {
+    height: 20px;
+    width: auto;
+    padding: 5px;
+    color: #fff;
+  }
+  .socialmedia ul li {
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .page-header h1 { 
+    font-size: 20px;
+  }
+  .about .picture img {
+    height: 250px;
+    padding-top: 20px;
+  }
+  .description p {
+    padding: 60px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    font-size: 1.2em;
+  }
+  .skillset  {
+    padding: 60px;
+    padding-top: 40px;
+  }
+  .list li {
+    font-size: 1em;
+  }
+  .skillset h1 {
+    font-size: 1.2em;
+  }
+  .headergallery h1 {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+    font-size: 1.2em;
+  }
+  .gallery img {
+    width: 400px;
+    height: 400px;
+    padding-bottom: 20px;
+  }
+  .text {
+    font-size: 1.2em;
+  }
+  .title h1 {
+    font-size: 1.2em;
+  }
+  #name,
+  #email-data {
+    width: 400px;
+  }
+  input,
+  textarea {
+    border: 2px solid #544c49;
+    width: 400px;
+  }
+  .newform button {
+    height: 50px;
+    width: 400px;
+    margin-top: 30px;
+  }
+  .newform button:hover {
+    background-color: #FFFFFF;
+    color: #756f6c;
+    cursor: pointer;
+    border: 2px solid #756f6c;
+  }
+  .socialmedia {
+    display: flex;
+    height: 70px;
+  }
+  .socialmedia .text  {
+    font-size: 1.2em;
+    position: relative;
+    left: 50px;
+    top: 8px;
+  }
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  .body {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    height: 100vh;
+  }
+  .page-header {
+    display: flex;
+    height: 100vh;
+    position: relative;
+  }
+  .burger, .active, .wrapper-active {
+    display: none;
+  }
+  .menu, .larger {
+    display: block;
+  }
+  .menu nav {
+    position: absolute; 
+    display: inline-block;
+    left: 50%;
+    text-align: center; 
+  }
+  .menu nav ul {
+    display: inline-block; 
+    position: relative;
+    top: 20%;
+  }
+  .menu nav ul li {
+    margin: 100px 15px 100px 15px;
+    display: block;
+    float: left;
+    position: relative;
+    right: 50%; 
+  }
+  .menu nav li a {
+    color: #756f6c;
+    font-size: 30px;
+    font-family: 'Dosis', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+    font-weight: 500;   
+  }
+  .menu nav a:hover {
+    text-decoration: underline;
+    color: #544c49;
+    cursor: pointer;
+    zoom: 1.1;
+  }
+  .page-header h1 {
+    font-size: 40px;
+    font-weight: 1200;
+  }
+  .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;      
+  }
+  .aboutme {
+    box-sizing: border-box;
+    padding: 100px;
+    padding-left: 150px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .picture {
+    width: 50%;
+    align-items: center;
+  }
+  .about .picture img {
+    height: 300px;
+  }
+  .description p {
+    font-size: 1.2em;
+    color: #544c49;
+    padding-left: 10px;
+  }
+  .skillset  {
+    padding-top: 30px;
+    padding-left: 10px;  
+  }
+  .list li {
+    list-style: none;
+    padding: 12px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    border-bottom: 1px solid #eee;
+  }
+  .skillset h1 {
+    font-size: 1.3em;
+  }
+  .headergallery h1 {
+    font-size: 1.3em;
+    padding-left: 150px;
+    padding-bottom: 40px;
+  }
+  .pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .gallery img {
+    width: 350px;
+    height: 350px;
+  }
+  .text {
+    font-size: 25px;
+  }
+  .gallery img:hover+.text {
+    color: #fff;
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .picture img {
+    width: 400px;
+    animation-name: changeOpacity;
+    animation-duration: 5s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    position: relative;
+    align-items: center;
+    left: 90px;
+    top: 50px; 
+  }
+  .title h1 {
+    font-size: 1.3em;
+    padding-bottom: 40px;
+    padding-top: 60px;
+  }
+  #name,
+  #email-data
+  {
+    display: inline-block;
+    height: 33px;
+    width: 380px;
+    margin-bottom: 10px;
+  }
+  input,
+  textarea {
+    border: 2px solid #544c49;
+    width: 380px;
+  }
+  .newform button {
+    display: block;
+    height: 50px;
+    width: 380px;
+    margin-top: 40px;
+  }
+  .socialmedia {
+    .socialmedia {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .socialmedia .text  {
+    color: #FFF;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3em;
+    position: relative;
+    left: 50px;
+    top: 15px;
+  }
+  .socialmedia .fab {
+    height: 80px;
+    width: auto;
+    padding: 5px;
+  } 
+}
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  nav li a {
+    font-size: 35px;
+  }
+  .page-header h1 {
+    font-size: 40px;
+    margin-left: 30px;
+  }
+  .about .picture img {
+    height: 320px;
+  }
+  .description p {
+    font-size: 1.2em;
+    padding-left: 10px;
+  }
+  .skillset  {
+    padding-top: 40px;
+    padding-left: 10px;  
+  }
+  .list li {
+    list-style: none;
+    padding: 12px;
+    font-size: 1em;
+  }
+  .skillset h1 {
+    font-size: 1.3em;
+    color: #544c49;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .headergallery h1 {
+    font-size: 1.3em;
+    padding-left: 150px;
+    padding-bottom: 40px;
+  }
+  .pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nature, .city, .portrait {
+    display: flex;
+    flex-basis: 30%;
+    justify-content: center;
+    position: relative;
+  }
+  .gallery img {
+    width: 350px;
+    height: 350px;   
+  }
+  .text {
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+  }
+  .gallery img:hover {
+    opacity: 1.0;
+  }
+  .gallery img:hover+.text {
+    color: #fff;
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .picture img {
+    height: 250px;
+    animation-name: changeOpacity;
+    animation-duration: 5s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    position: relative;
+    align-items: center;
+    left: 90px;
+    top: 50px; 
+  }
+  .title h1 {
+    font-size: 1.3em;
+    padding-bottom: 40px;
+    padding-top: 60px;
+  }
+  .myform {
+    display: flex;
+    flex-direction: column;
+  }
+  #name,
+  #email-data
+  {
+  display: inline-block;
+  height: 33px;
+  width: 380px;
+  margin-bottom: 10px;
+  }
+  input,
+  textarea {
+    width: 380px;
+  }
+  .newform button {
+    display: block;
+    height: 50px;
+    width: 380px;
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  .socialmedia {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .socialmedia .text  {
+    font-size: 1.3em;
+    position: relative;
+    left: 50px;
+    top: 15px;
+  }
+}
